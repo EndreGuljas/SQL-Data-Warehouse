@@ -1,15 +1,10 @@
-# 🏢 End-to-End Data Warehouse and Analytics Report
-
-![SQL](https://img.shields.io/badge/SQL-Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white)
-![T-SQL](https://img.shields.io/badge/T--SQL-ETL-0078D4?style=flat&logo=microsoft&logoColor=white)
-![Architecture](https://img.shields.io/badge/Architecture-Medallion-orange?style=flat)
-![Status](https://img.shields.io/badge/Status-Complete-success?style=flat)
+# <h1 align="center"> End-to-End Data Warehouse and Analytics Report</h1>
 
 > A comprehensive SQL-based data warehousing solution that transforms fragmented retail data into a unified analytics platform using medallion architecture, enabling data-driven decision making across the organization.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Executive Summary](#-1-executive-summary)
 - [Business Problem & Objective](#-3-business-problem--objective)
@@ -26,7 +21,7 @@
 
 ---
 
-## 📊 1. Executive Summary
+## 1. Executive Summary
 
 This project focuses on a retail company struggling with a fragmented and disorganized data landscape that has limited their ability to understand business performance. Critical data was siloed across two disconnected systems: a CRM (Customer Relationship Management) platform containing customer profiles, product information, and sales transactions, and an ERP (Enterprise Resource Planning) system storing supplementary customer demographics, geographic attributes, and product hierarchies. Inconsistent naming conventions, duplicate records, and the absence of a unified data model made reliable analysis difficult.
 
@@ -49,7 +44,7 @@ Together, these phases demonstrate an end-to-end data workflow that turns raw, d
 
 ---
 
-## 🎯 3. Business Problem & Objective
+## 3. Business Problem & Objective
 
 The company was operating in a fragmented data environment that made it difficult to gain a clear and consistent view of business performance. Critical data was split across two siloed systems, each providing only part of the overall picture. The CRM system captured customer interactions and daily sales transactions but lacked demographic and geographic context. In contrast, the ERP system contained essential master data, which included product hierarchies and regional attributes, but was disconnected from transactional sales activity. As a result, teams were unable to easily combine operational and analytical insights.
 
@@ -79,7 +74,7 @@ Therefore, the objective of this project was to move the organization from manua
 
 ---
 
-## 🏗️ 4. Data Architecture Overview
+## 4. Data Architecture Overview
 
 For this project, a modern data warehouse was built using a medallion architecture, designed to progressively improve data quality as information moves through the pipeline. The architecture separates ingestion, transformation, and analytics into distinct layers, allowing raw data to be systematically refined into usable assets for the company. This structure not only preserves data lineage from source to report, but also enables targeted quality checks and validation at each stage of processing.
 
@@ -125,7 +120,7 @@ For the company, this architecture ensures that every report, dashboard, and ana
 ![image](https://github.com/EndreGuljas/SQL-Data-Warehouse/blob/main/Data_Warehouse/diagrams/DataArchitecture.png)
 ---
 
-## 🔄 5. Data Flow & Integration
+## 5. Data Flow & Integration
 
 Before diving into the individual layers of the medallion architecture, it is important to understand how data flows through the pipeline end to end. The purpose of the pipeline is to transform raw source data into a clean and analytics-ready dataset that can support consistent reporting and business insight.
 
@@ -149,7 +144,7 @@ This integration layer creates a unified analytical view of customers, products,
 
 ---
 
-## 🗄️ 6. Warehouse Layers
+## 6. Warehouse Layers
 
 ### Bronze Layer
 
@@ -235,7 +230,7 @@ In the gold layer, the project shifts from data engineering to business analytic
 
 ---
 
-## 🔍 7. Exploratory Data Analysis
+## 7. Exploratory Data Analysis
 
 The EDA phase focused on validating the analytical readiness of the data warehouse, while also beginning to uncover early business insights. This step ensured that the gold layer accurately reflected real business activity and validated that downstream reporting and analysis would be reliable. To structure the analysis, the dataset was evaluated through two parts:
 
@@ -264,13 +259,13 @@ Throughout the EDA process, it was important to directly answer stakeholder ques
 
 These questions guided the analysis and ensured that exploratory work remained focused on insights that would directly support the company. The EDA uncovered several meaningful patterns that could be important for strategic planning:
 
-> 📍 **Revenue Concentration:** Revenue was found to be highly concentrated geographically, with the top three regions accounting for over 60% of total sales. This concentration highlights clear opportunities for targeted marketing efforts and regional investment.
+> **Revenue Concentration:** Revenue was found to be highly concentrated geographically, with the top three regions accounting for over 60% of total sales. This concentration highlights clear opportunities for targeted marketing efforts and regional investment.
 
-> 📦 **Product Performance:** The electronics category drove the highest volume of orders, accessories consistently delivered the strongest profit margins per unit. This distinction reinforced the importance of evaluating both volume and profitability when assessing product performance.
+> **Product Performance:** The electronics category drove the highest volume of orders, accessories consistently delivered the strongest profit margins per unit. This distinction reinforced the importance of evaluating both volume and profitability when assessing product performance.
 
-> 📅 **Seasonal Behavior:** Time-based analysis showed strong seasonal behavior, with a 15% increase in average order value during holiday periods. This confirmed the effectiveness of seasonal promotions and underscored the value of aligning inventory and marketing strategies with peak purchasing windows.
+> **Seasonal Behavior:** Time-based analysis showed strong seasonal behavior, with a 15% increase in average order value during holiday periods. This confirmed the effectiveness of seasonal promotions and underscored the value of aligning inventory and marketing strategies with peak purchasing windows.
 
-> 👥 **Customer Segmentation:** Customer segmentation analysis demonstrated that the top 5% of customers by revenue contributed a disproportionately large share of overall profitability. This insight highlights a clear opportunity to develop targeted retention and loyalty strategies focused on high-value customers.
+> **Customer Segmentation:** Customer segmentation analysis demonstrated that the top 5% of customers by revenue contributed a disproportionately large share of overall profitability. This insight highlights a clear opportunity to develop targeted retention and loyalty strategies focused on high-value customers.
 
 For the company, these findings provide immediate direction for targeted marketing, pricing evaluation, and customer retention strategies, transforming exploratory analysis into actionable business guidance.
 
@@ -287,7 +282,7 @@ The EDA phase used a range of analytical techniques to explore, validate, and su
 
 ---
 
-## 📈 8. Advanced Analytics and Reporting
+## 8. Advanced Analytics and Reporting
 
 The final phase of the project focuses on transforming the warehouse data into data that is ready for business analytics. While earlier phases focussed on data quality and uncovered baseline insights, this stage moves beyond reporting to answer important business questions related to growth, customer behavior, and product performance over time. This analytical layer is designed to support strategic decision making by tracking business momentum, benchmarking current performance against historical trends, and identifying high-impact customer and product segments.
 
@@ -306,7 +301,7 @@ The analyses were developed around five core business themes, each aligned with 
 The analyses uncovered several strategic insights that have direct business implications that can be used by the company:
 
 <details>
-<summary><b>📊 Growth Insights</b></summary>
+<summary><b> Growth Insights</b></summary>
 
 **YoY Growth Momentum:** Using `LAG()` to compare revenue across yearly periods revealed that while total revenue is increasing, growth velocity peaked in specific quarters. This helped isolate which marketing initiatives drove meaningful impact versus organic baseline growth.
 
@@ -315,7 +310,7 @@ The analyses uncovered several strategic insights that have direct business impl
 </details>
 
 <details>
-<summary><b>💰 Revenue & Product Performance</b></summary>
+<summary><b> Revenue & Product Performance</b></summary>
 
 **80/20 Revenue Concentration:** Part-to-whole analysis showed that approximately 20% of the product catalog generated nearly 80% of total revenue. This insight supports inventory optimization by prioritizing high-velocity SKUs and reevaluating long-tail products.
 
@@ -324,7 +319,7 @@ The analyses uncovered several strategic insights that have direct business impl
 </details>
 
 <details>
-<summary><b>👥 Customer Behavior</b></summary>
+<summary><b> Customer Behavior</b></summary>
 
 **High-Value Customer Identification:** Spend-frequency segmentation isolated a VIP customer tier (top 5% by revenue) with a retention rate nearly three times higher than the average customer, highlighting the ROI of targeted loyalty programs.
 
@@ -351,7 +346,7 @@ The final product of this phase was the creation of numerous SQL views in the go
 
 ---
 
-## ✅ 9. Data Quality & Validation
+## 9. Data Quality & Validation
 
 Maintaining high-quality data was an important requirement throughout the project. A structured validation framework was implemented across the medallion architecture to detect issues early and prevent invalid data from reaching the gold layer. By enforcing quality checks at each stage of the pipeline, the warehouse delivers reliable data throughout the pipeline.
 
@@ -393,7 +388,7 @@ This validation framework serves as an important risk mitigation layer for the a
 
 ---
 
-## 🎓 10. Conclusion
+## 10. Conclusion
 
 Overall, the project was successfully able to deliver a well performing SQL data warehouse by integrating CRM and ERP systems into a single platform. From the company's perspective, this project replaced fragmented reporting with a unified analytics platform that supports faster, more confident decision making across departments. Using a medallion architecture, the pipeline enables a flow from raw ingestion to a usable star schema for the business, supported by automated ETL processes and thorough data quality controls.
 
@@ -426,19 +421,9 @@ Beyond the technical details, this project reinforced that effective data engine
 
 Looking ahead, the project can easily be scaled and improved for further growth. Future enhancements could include:
 
-- 🔄 Introducing workflow orchestration with **Apache Airflow**
-- 📝 Managing transformations as code using **dbt**
-- ☁️ Migrating to a cloud-native platform such as **Snowflake**
-- 🤖 Supporting advanced analytics use cases such as customer churn prediction and demand forecasting
+- Introducing workflow orchestration with **Apache Airflow**
+- Managing transformations as code using **dbt**
+- Migrating to a cloud-native platform such as **Snowflake**
+- Supporting advanced analytics use cases such as customer churn prediction and demand forecasting
 
 In conclusion, this project demonstrates how data systems can transform raw, disconnected data into valuable business insights that drive decision making for a company.
-
----
-
-## 📬 Contact
-
-Feel free to reach out if you have questions about this project or would like to discuss data engineering and analytics!
-
----
-
-*Built with SQL Server, T-SQL, and a commitment to data quality* ✨
