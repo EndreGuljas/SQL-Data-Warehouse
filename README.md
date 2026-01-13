@@ -122,8 +122,7 @@ For the company, this architecture ensures that every report, dashboard, and ana
 
 ### Architecture Diagram
 
-<img src="diagrams/DataArchitecture.png" alt="Description" width="900"/>
-
+![image](https://github.com/EndreGuljas/SQL-Data-Warehouse/blob/main/Data_Warehouse/diagrams/DataArchitecture.png)
 ---
 
 ## 🔄 5. Data Flow & Integration
