@@ -122,24 +122,7 @@ For the company, this architecture ensures that every report, dashboard, and ana
 
 ### Architecture Diagram
 
-```
-📁 CRM System          📁 ERP System
-     │                       │
-     └───────────┬───────────┘
-                 ↓
-         🥉 BRONZE LAYER
-         (Raw Ingestion)
-                 ↓
-         🥈 SILVER LAYER
-    (Cleaning & Transformation)
-                 ↓
-         🥇 GOLD LAYER
-        (Star Schema/Views)
-                 ↓
-        📊 BI Tools & Analytics
-```
-
-*[INSERT DETAILED ARCHITECTURE DIAGRAM HERE]*
+<img src="diagrams/DataArchitecture.png" alt="Description" width="900"/>
 
 ---
 
@@ -149,13 +132,7 @@ Before diving into the individual layers of the medallion architecture, it is im
 
 ### Pipeline Flow
 
-```
-CRM System ──┐
-             ├─→ Bronze ──→ Silver ──→ Gold ──→ BI Tools
-ERP System ──┘
-```
-
-*[INSERT DETAILED DATA FLOW DIAGRAM HERE]*
+<img src="diagrams/DataFlow.png" alt="Description" width="900"/>
 
 The pipeline begins with the extraction of flat files from two primary source systems: the CRM system, which manages transactional sales data and core customer records, and the ERP system, which provides critical master data such as product hierarchies, demographic attributes, and geographic classifications. These datasets are ingested into the bronze layer in their original format to preserve data lineage and support troubleshooting.
 
@@ -169,7 +146,7 @@ In the final stage, curated datasets are promoted to the gold layer, where they 
 
 This integration layer creates a unified analytical view of customers, products, and sales activity while preserving data integrity across systems. This unified integration eliminated the need for manual CSV joins and significantly reduced reporting turnaround time, allowing the company to analyze customers, products, and sales activity in a consistent view.
 
-*[INSERT INTEGRATION DIAGRAM HERE]*
+<img src="diagrams/DataIntegration.png" alt="Description" width="900"/>
 
 ---
 
@@ -245,17 +222,7 @@ The gold layer represents the final stage of the pipeline, where cleansed and st
 
 **Schema and Storage:** A dimensional modeling approach was adopted using a star schema, organizing data into a central fact table surrounded by related dimension tables. This structure simplifies analytical queries and improves performance by minimizing the amount of joins needed.
 
-```
-         dim_customers
-               │
-               │
-dim_products ──┼── fact_sales
-               │
-               │
-         dim_geography
-```
-
-*[INSERT DETAILED GOLD LAYER DIAGRAM HERE]*
+<img src="diagrams/GoldDataModel.png" alt="Description" width="900"/>
 
 **Use of SQL Views:** The gold layer is implemented using SQL views rather than physical tables. This ensures that all analytical models always reflect the latest validated data from the silver layer without needing extra storage or reload processes.
 
