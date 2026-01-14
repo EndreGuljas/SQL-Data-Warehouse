@@ -1,0 +1,29 @@
+﻿Column1,Column2,Column3,Column4
+DataWarehouse,bronze,crm_cust_info,BASE TABLE
+DataWarehouse,bronze,crm_prd_info,BASE TABLE
+DataWarehouse,bronze,crm_sales_details,BASE TABLE
+DataWarehouse,bronze,erp_loc_a101,BASE TABLE
+DataWarehouse,bronze,erp_cust_az12,BASE TABLE
+DataWarehouse,bronze,erp_px_cat_g1v2,BASE TABLE
+DataWarehouse,silver,crm_cust_info,BASE TABLE
+DataWarehouse,silver,crm_prd_info,BASE TABLE
+DataWarehouse,silver,crm_sales_details,BASE TABLE
+DataWarehouse,silver,erp_loc_a101,BASE TABLE
+DataWarehouse,silver,erp_cust_az12,BASE TABLE
+DataWarehouse,silver,erp_px_cat_g1v2,BASE TABLE
+DataWarehouse,gold,dim_customers,VIEW
+DataWarehouse,gold,dim_products,VIEW
+DataWarehouse,gold,fact_sales,VIEW
+DataWarehouse,gold,report_products,VIEW
+DataWarehouse,gold,report_customers,VIEW
+,,,
+customer_key,bigint,YES,NULL
+customer_id,int,YES,NULL
+customer_number,nvarchar,YES,50
+first_name,nvarchar,YES,50
+last_name,nvarchar,YES,50
+country,nvarchar,YES,50
+marital_status,nvarchar,YES,50
+gender,nvarchar,YES,50
+birthdate,date,YES,NULL
+create_date,date,YES,NULL
