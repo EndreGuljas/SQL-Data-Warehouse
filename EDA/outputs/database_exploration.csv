@@ -1,0 +1,18 @@
+﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,,,COLUMN_NAME,DATA_TYPE,IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH
+DataWarehouse,bronze,crm_cust_info,BASE TABLE,,,customer_key,bigint,YES,NULL
+DataWarehouse,bronze,crm_prd_info,BASE TABLE,,,customer_id,int,YES,NULL
+DataWarehouse,bronze,crm_sales_details,BASE TABLE,,,customer_number,nvarchar,YES,50
+DataWarehouse,bronze,erp_loc_a101,BASE TABLE,,,first_name,nvarchar,YES,50
+DataWarehouse,bronze,erp_cust_az12,BASE TABLE,,,last_name,nvarchar,YES,50
+DataWarehouse,bronze,erp_px_cat_g1v2,BASE TABLE,,,country,nvarchar,YES,50
+DataWarehouse,silver,crm_cust_info,BASE TABLE,,,marital_status,nvarchar,YES,50
+DataWarehouse,silver,crm_prd_info,BASE TABLE,,,gender,nvarchar,YES,50
+DataWarehouse,silver,crm_sales_details,BASE TABLE,,,birthdate,date,YES,NULL
+DataWarehouse,silver,erp_loc_a101,BASE TABLE,,,create_date,date,YES,NULL
+DataWarehouse,silver,erp_cust_az12,BASE TABLE,,,,,,
+DataWarehouse,silver,erp_px_cat_g1v2,BASE TABLE,,,,,,
+DataWarehouse,gold,dim_customers,VIEW,,,,,,
+DataWarehouse,gold,dim_products,VIEW,,,,,,
+DataWarehouse,gold,fact_sales,VIEW,,,,,,
+DataWarehouse,gold,report_products,VIEW,,,,,,
+DataWarehouse,gold,report_customers,VIEW,,,,,,
