@@ -6,18 +6,18 @@
 
 ## Table of Contents
 
-- [Executive Summary](#-1-executive-summary)
-- [Business Problem & Objective](#-3-business-problem--objective)
-- [Data Architecture Overview](#-4-data-architecture-overview)
-- [Data Flow & Integration](#-5-data-flow--integration)
-- [Warehouse Layers](#-6-warehouse-layers)
+- [Executive Summary](#1-executive-summary)
+- [Business Problem & Objective](#3-business-problem--objective)
+- [Data Architecture Overview](#4-data-architecture-overview)
+- [Data Flow & Integration](#5-data-flow--integration)
+- [Warehouse Layers](#6-warehouse-layers)
   - [Bronze Layer](#bronze-layer)
   - [Silver Layer](#silver-layer)
   - [Gold Layer](#gold-layer)
-- [Exploratory Data Analysis](#-7-exploratory-data-analysis)
-- [Advanced Analytics and Reporting](#-8-advanced-analytics-and-reporting)
-- [Data Quality & Validation](#-9-data-quality--validation)
-- [Conclusion](#-10-conclusion)
+- [Exploratory Data Analysis](#7-exploratory-data-analysis)
+- [Advanced Analytics and Reporting](#8-advanced-analytics-and-reporting)
+- [Data Quality & Validation](#9-data-quality--validation)
+- [Conclusion](#10-conclusion)
 
 ---
 
